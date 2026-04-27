@@ -1,0 +1,87 @@
+ body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #16023d; /* Roxo-azul */
+      color: white;
+      text-align: center;
+      transition: background-color 1s ease-in-out, color 1s ease-in-out;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    h1, h2, p { animation: slideUp 1.5s ease-out; }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    .retangulo {
+      border: 2px solid #088bf7;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 700px;
+      background-color: rgba(255,255,255,0.05);
+    }
+
+    .projeto-item img {
+      max-width: 180px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+    }
+    .projeto-item img[alt="Java"] { max-width: 120px; }
+
+    .top-bar {
+      background-color: #290392;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar h1 {
+      background-color: white;
+      color: #088bf7;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section { padding: 2rem; }
+    .projeto-container { position: relative; max-width: 800px; margin: auto; }
+    .projeto-item { display: none; }
+    .projeto-item.active { display: block; }
+
+    /* Setas brancas */
+    .setas img {
+      cursor: pointer;
+      margin: 0 20px;
+      filter: brightness(0) invert(1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      margin: 0;
+      padding: 0;
+      border-radius: 5px;
+      width: 200px;
+    }
+    nav ul li { border-bottom: 1px solid #444; }
+    nav ul li a { color: white; text-decoration: none; display: block; padding: 12px; }
+    nav ul li a:hover { background-color: #444; }
+
+    footer {
+      background-color: #0400ff;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .dark-mode { background-color: #222; color: #f5f5f5; }
